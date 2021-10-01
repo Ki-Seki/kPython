@@ -1,0 +1,18 @@
+{
+  "builtin": [
+    "random",
+    "os",
+    "sys",
+    "time",
+    "importlib"
+  ],
+  "core": [
+    "help",
+    "quit",
+    "reload"
+  ],
+  "plugin": [
+    "focus",
+    "gen_shortcut"
+  ]
+}
