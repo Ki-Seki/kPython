@@ -22,9 +22,9 @@ def command_handler(command):
         try:
             ans = eval(command)
             if ans is not None:
-                print("The command returned: ", ans)
+                print("The command returned:", ans)
         except Exception as e:
-            print("An error occurred: ", e)
+            print("An error occurred:", e)
 
 
 if __name__ == "__main__":

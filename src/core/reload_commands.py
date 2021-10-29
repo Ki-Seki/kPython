@@ -11,7 +11,7 @@ def reload_commands():
     """
     with open(command_handler_path, "r") as f:
         lines = f.readlines()
-        for i in range(0, len(lines)):
+        for i in range(len(lines)):
             if lines[i].startswith("#"):  # Find the first comment line
                 del lines[0: i]  # delete all lines before the comment line
                 break
