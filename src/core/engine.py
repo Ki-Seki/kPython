@@ -8,10 +8,10 @@ def kpython_help():
     Print help information for kPython.
     """
     help_txt = f"""kPython is a single-line Python command processor, which is 
-        very easy to extend itself and to use. Currently, you can use 
-        `help(plugin_keyword)` to see a specific help. Those keywords are
-        {plugin.__all__}
-        """
+very easy to extend itself and to use. Currently, you can use 
+`help(plugin_keyword)` to see a specific help. Those keywords are
+{plugin.__all__}
+"""
     print(help_txt)
 
 
