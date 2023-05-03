@@ -1,25 +1,11 @@
-中文简体 | [English](./README_en.md)
+[English](./README_en.md) | [中文简体](./README.zh_CN.md)
 
 # kPython
 
-kPython 是一个单行 Python 命令解释器。和 iPython 一样，kPython 是对 Python 的一层封装而已。尽管只能一次处理单个独立的语句，但是通过自己写 plugin 的方式，可以让 kPython 变成一个强大的瑞士军刀。
+kPython is a single-line Python command interpreter. Just like iPython, kPython is simply a wrapper of Python. Although it can only process single isolated commands, by writing plugins, kPython can become a powerful Swiss Army knife.
 
-# 用户请看这里
+# Usage
 
-## 基本用法
-
-待补充
-
-## 如何写新插件
-
-待补充
-
-# 开发者请看这里
-
-待补充
-
-# 写在最后
-
-为什么叫 kPython 呢？这是因为我的英文名是 Ki Seki.
-
-为什么想到这个项目呢？有一天我想看点剧或者电影，但是不知道看哪个。我想用随机数在我豆瓣收藏的里面随机选一个。但是生成一个整数随机数很麻烦：要么在网上找到一个这样的工具网站；要么打开交互式 Python，先导入随机数模块，然后写 `random.randint()`。都不是那么得简洁。所以想着自己写个随机数脚本放在系统 `Path` 中。但这样呢，又有点小题大做。于是就想到了做一个可以随时插拔的交互式单行 Python 命令解释器。
+1. Clone this repo: `git clone https://github.com/Ki-Seki/kPython.git`
+2. Change directory to: `./src/`
+3. Run kPython.py: `python kPython.py`

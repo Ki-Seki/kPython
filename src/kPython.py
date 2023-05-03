@@ -1,7 +1,7 @@
-from core.command_handler import command_handler
+from core.engine import command_handler
 
 
-header = """kPython 1.0
+header = """kPython 1.1
 Solve a problem within one single-line Python command. (c) Ki Seki.
 Type 'help' for more information; type 'quit' to end the program
 """
