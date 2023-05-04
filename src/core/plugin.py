@@ -8,6 +8,10 @@ __all__ = [
 def gen_shortcut(dst="."):
     """
     Create a shortcut for kPython in directory `dst`.
+
+    If `dst` is in the system PATH, then you can 
+    use kPython by typing `kPython` instead of 
+    changing directory and typing `python kPython.py`.
     """
 
     import os
@@ -20,8 +24,11 @@ def gen_shortcut(dst="."):
 
 def focus(m=45, r=15):
     """
-    Focus on working for m minutes, and then rest for r minutes.
-    By default, m=45, r=15.
+    Focus on working for `m` minutes, and then rest for `r` minutes.
+
+    Requirements:
+    * Windows platform only
+    * `pip install winsound`
     """
 
     from time import sleep
@@ -37,6 +44,13 @@ def focus(m=45, r=15):
 def chat(prompt):
     """
     ChatGPT in terminal.
+
+    Requirements:
+    * Add your own OPENAI_API_KEY to the OS environment variables.
+    * `pip install openai`
+
+    More:
+    * Visit: https://platform.openai.com/docs/api-reference/authentication
     """
 
     import os
