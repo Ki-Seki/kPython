@@ -6,7 +6,7 @@ kPython 是一个单行 Python 命令解释器。和 iPython 一样，kPython �
 
 ![](./demo.gif)
 
-# 使用
+## 使用
 
 1. 克隆该仓库: `git clone https://github.com/Ki-Seki/kPython.git`
 2. 切换文件夹: `./src/`

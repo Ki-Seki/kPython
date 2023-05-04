@@ -6,8 +6,12 @@ kPython is a single-line Python command interpreter. Just like iPython, kPython 
 
 ![](./demo.gif)
 
-# Usage
+## Usage
 
 1. Clone this repo: `git clone https://github.com/Ki-Seki/kPython.git`
 2. Change directory to: `./src/`
 3. Run kPython.py: `python kPython.py`
+
+## TODO
+
+- [ ] `kpython_help` show all docs of plugin.
