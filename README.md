@@ -15,3 +15,4 @@ kPython is a single-line Python command interpreter. Just like iPython, kPython 
 ## TODO
 
 - [ ] `kpython_help` show all docs of plugin.
+- [ ] Use `rich` library to format all ouputs.
