@@ -1,8 +1,15 @@
+"""
+This file store all plugins.
+"""
+
+
+
 # Register new plugin here. One line for each plugin.
 __all__ = [
     'gen_shortcut', 
     'focus',
-    'chat'
+    'chat',
+    'arxiv_today'
     ]
 
 def gen_shortcut(dst="."):
@@ -66,3 +73,46 @@ def chat(prompt):
         timeout=1000,
     )
     return completion.choices[0].text
+
+def arxiv_today(kw, max_results=float('inf'), show_abstract=True, download=True, path='.'):
+    """
+    Fetch the arXiv paper whose title or abstract contains `kw`.
+
+    * Only fetched papers submitted today.
+    * Paper abstract will be printed if `show_results=True`
+    * Papers will be downloaded if `download=True`
+    * Downloaded papers will be saved in `path`.
+
+    Requirements:
+    * `pip install arxiv`
+    """
+
+    import os
+    import arxiv
+
+    search = arxiv.Search(
+    query = kw,
+    max_results = max_results,
+    sort_by = arxiv.SortCriterion.SubmittedDate
+    )
+    papers = list(search.results())
+    cnt = len(papers)
+
+    for i, paper in enumerate(papers):
+        print(f'TITLE: {paper.title}')
+        print(f'LINK: {paper.links[0]}')
+        if show_abstract:
+            print(f'ABSTRACT: {paper.summary}')
+        if download:
+            if not os.path.exists(path):
+                os.mkdir(path)
+            paper.download_pdf(dirpath=path, filename=f'{paper.get_short_id()}.pdf')
+            print(f'Paper downloaded {i+1}/{cnt}.')
+        print()
+    return 
+
+        
+
+if __name__ == '__main__':
+    arxiv_today('LLM', 5, path='./papers/')
+    # print(arxiv_today.__doc__)
