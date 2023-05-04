@@ -3,7 +3,8 @@ from core.engine import command_handler
 
 header = """kPython 1.1
 Solve a problem within one single-line Python command. (c) Ki Seki.
-Type 'help' for more information; type 'quit' to end the program
+Type `help` for more information; type `quit` to end the program.
+Commands start with `/` are terminal commands, eg. `/ ls`.
 """
 
 if __name__ == "__main__":
