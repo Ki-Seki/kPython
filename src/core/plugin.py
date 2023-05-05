@@ -23,7 +23,7 @@ def gen_shortcut(dst="."):
 
     import os
 
-    dst_path = f"{dst}/kPython" + (".cmd" if os.system == 'nt' else ".sh")
+    dst_path = f"{dst}/kPython" + (".cmd" if os.name == 'nt' else ".sh")
     with open(dst_path, "w") as f:
         f.write(f"cd {os.getcwd()}/src/\n")
         f.write("python kPython.py")
